@@ -78,13 +78,14 @@
 
         /* Triggers */
 
-        var $inputSearch = $container.find('.simple-select-modal input');
-
+        var $inputSearch = $container.find('.simple-select-modal input'),
+            $selected = $container.find('.selected');
+            
         $inputSearch.on('keyup', function (e) {
             renderResults(searchTerm(e.target.value));
         });
 
-        $container.find('.selected').on('click', function (e) {
+        $selected.on('click', function (e) {
             $inputSearch.val('');
             $container.addClass('modal-open');
             $inputSearch.focus();
