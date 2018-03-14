@@ -1,6 +1,7 @@
 (function($){
     $.fn.simpleSelect = function(options){
         var optionsDefault = {
+            terms: [],
             notFoundMessage: 'Não encontrado.',
             defaultSelected: 'Selecionar...'
         }
@@ -80,7 +81,7 @@
 
         var $inputSearch = $container.find('.simple-select-modal input'),
             $selected = $container.find('.selected');
-            
+
         $inputSearch.on('keyup', function (e) {
             renderResults(searchTerm(e.target.value));
         });
