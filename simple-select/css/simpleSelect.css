@@ -45,7 +45,7 @@
     padding: 0px 10px;
     padding-bottom: 10px; }
     .simple-select .simple-select-modal .simple-select-result {
-      overflow-y: scroll;
+      overflow-y: auto;
       max-height: 400px;
       box-sizing: border-box; }
     .simple-select .simple-select-modal input {
